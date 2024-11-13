@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "b9f985c5-f47b-41de-89d4-f08bb0807204",
+		"name": "SalesCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "25887601-b9f985c5-f47b-41de-89d4-f08bb0807204"
+	},
+	"item": [
+		{
+			"name": "GetCustomersTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bf303116-0a6c-463c-8f66-13d07b46b334",
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "05bfba81-c116-4ce1-bc76-011df357daac",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{salesURL}}/customers",
+					"host": [
+						"{{salesURL}}"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "18b95eda-4639-4328-982a-933ad386b3a9",
+			"key": "salesURL",
+			"value": "http://localhost:5039",
+			"type": "default"
+		}
+	]
+}
